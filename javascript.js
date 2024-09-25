@@ -60,19 +60,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-<script>
-  const elements5 = document.querySelectorAll(".animate");
-
-  const observer5 = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-        observer5.unobserve(entry.target);
-      }
-    });
-  });
-
-  elements5.forEach((element) => {
-    observer5.observe(element);
-  });
-</script>
